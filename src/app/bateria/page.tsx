@@ -21,7 +21,7 @@ export default function Bateria() {
 
      {/* ABAIXO 2° */}
      {/* tirar mb dps */}
-     <div className="flex flex-col w-full h-[90vh] mb-10 overflow-hidden items-center" style={{backgroundColor: "var(--verde-escuro)"}}> 
+    <div className="flex flex-col w-full h-[95vh] mb-10 overflow-hidden items-center" style={{backgroundColor: "var(--verde-escuro)"}}> 
         <Image src={Folha} alt="" className="h-[20%] w-full object-cover object-bottom opacity-35" />
         <div className="flex w-[70%]">
             <div className="w-[50%] flex items-center justify-center">
@@ -33,7 +33,7 @@ export default function Bateria() {
                 <p className="text-gray-300 text-3xl">30km/h</p>
             </div>
         </div>
-        <button id="btnHabilita" className="p-5 bg-green-800 rounded-3xl w-[30%] text-white mt-10 hover:bg-green-700">HABILITAR</button>
+        <button id="btnHabilita" className="p-5 bg-green-800 rounded-3xl w-[30%] text-white hover:bg-green-700">HABILITAR</button>
     </div>
 
 
