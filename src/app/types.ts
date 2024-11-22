@@ -10,3 +10,18 @@ export type CardMembroProps = {
     rm: number;
     turma: string;
 }
+
+export type CarroProps = {
+    id: number;
+    placa: string;
+    marca: string;
+    modelo: string;
+    ano: number;
+}
+
+export type BateriaProps = {
+    id: number;
+    tensao_nominal: number;
+    capacidade_ah: number;
+    capacidade_kwh: number;
+}

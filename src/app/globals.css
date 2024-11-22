@@ -116,3 +116,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+body {
+  @apply flex flex-col min-h-screen
+}
+
+main {
+  @apply grow
+}
