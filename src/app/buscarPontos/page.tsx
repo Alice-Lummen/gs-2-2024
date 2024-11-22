@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MapaPontos from "@/../public/images/mapaPontos.png";
 import Folha from "@/../public/images/folhasFundo.png";
 import Image from "next/image";
@@ -8,6 +8,11 @@ import Mapa from "../components/Mapa";
 
 export default function BuscarPontos() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const abrirMapa = () => {
     setIsModalOpen(true);
@@ -49,7 +54,7 @@ export default function BuscarPontos() {
       </button>
 
       {/* Modal */}
-      {isModalOpen && (
+      {isClient && isModalOpen && (
         <div className="fixed w-[90%] md:w-[600px] h-[90%] md:h-[600px] top-1/2 left-1/2 backdrop-opacity-20 transform -translate-x-1/2 -translate-y-1/2 bg-white flex justify-center items-center z-10">
           <div className="bg-white p-5 rounded-lg w-full h-full md:w-auto md:h-auto">
             <button onClick={fecharMapa} className="mt-3 p-2 pl-3 pr-3 bg-red-500 text-white rounded">X</button>    
