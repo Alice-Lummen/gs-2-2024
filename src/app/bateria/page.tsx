@@ -22,7 +22,7 @@ export default function Bateria() {
                 setBateria(Number(porcentagem));
             } else {
                 console.error("Erro: kWh utilizado é maior que a bateria total.");
-                setBateria(0); // ou outro valor padrão
+                setBateria(0); 
             }
         })
     }, [])
@@ -33,7 +33,7 @@ export default function Bateria() {
             const previsao = (((distancia * 100) / 15.8) * -1).toFixed(1);
             return previsao;
         }
-        return 0; // Retorna 0 ou outro valor padrão se carga estiver vazio ou inválido
+        return 0; 
     }
 
 
