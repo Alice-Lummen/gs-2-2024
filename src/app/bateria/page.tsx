@@ -11,7 +11,7 @@ export default function Bateria() {
             <div className="flex flex-col mt-20 w-[70%] justify-evenly items-center h-[85vh]">
                 <h3 className="text-2xl">Sua bateria atual:</h3>
                 <h4 className="text-9xl" style={{color: "var(--cinza-base)", fontWeight: 700}}>40%</h4>
-                <button className="p-5 bg-green-800 rounded-3xl text-white hover:bg-green-700">TROCAR PARA QUILOMETRAGEM</button>
+                <button className="p-5 bg-green-800 rounded-3xl text-white hover:bg-green-700">PREVISÃO DE QUILOMETRAGEM</button>
                 <Link className="text-xl underline hover:cursor-pointer" href="#btnHabilita">Habilitar ChangeGO</Link>
             </div>
         <div>
