@@ -13,12 +13,12 @@ export default function Cabecalho() {
             />
             <div className="flex absolute w-[80vw] h-[92vh] z-10 justify-center items-center rounded-3xl p-10" style={{backgroundColor: "var(--verde-escuro)"}}>
                 <div className="flex w-full h-full justify-center items-center">
-                    <p style={{color: "white", fontSize: 46, fontWeight: 700}}>
+                    <p className="text-white text-4xl md:text-5xl font-bold">
                     Olá!<br/>
                     vamos <span className="text-green-300">tria</span>r um caminho mais sustentável
                     </p>
                 </div>
-                <div className="flex w-full h-full justify-center items-center" >
+                <div className="flex w-full h-full justify-center items-center hidden md:flex" >
                     <Image 
                     src={Onibus}
                     alt="Onibus sustentável"

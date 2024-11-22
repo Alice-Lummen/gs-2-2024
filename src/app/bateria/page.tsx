@@ -47,77 +47,67 @@ export default function Bateria() {
 
   return (
     <main className="relative w-full">
-        <div className="flex w-full justify-between">
-<<<<<<< HEAD
+        <div className="flex flex-col md:flex-row w-full justify-between">
             {!visibilidade ? (
-                <div className="flex flex-col mt-20 w-[70%] justify-evenly items-center h-[85vh]">
+                <div className="flex flex-col mt-20 w-full md:w-[70%] justify-evenly items-center h-[85vh]">
                     <h3 className="text-2xl">Sua bateria atual:</h3>
 
                     {carregador ? (
                         <>
-                        <h4 className="text-9xl" style={{color: "var(--verde-normal)", fontWeight: 700}}>{bateria}%</h4>
-                        <p className="text-xl text-green-500">ChargeGO habilitada</p>
+                        <h4 className="text-6xl md:text-9xl" style={{color: "var(--verde-normal)", fontWeight: 700}}>{bateria}%</h4>
+                        <p className="text-lg md:text-xl text-green-500">ChargeGO habilitada</p>
                         </>
                     ) : (
                         <>
-                        <h4 className="text-9xl" style={{color: "var(--cinza-base)", fontWeight: 700}}>{bateria}%</h4>
-                        <p className="text-xl text-yellow-500">ChargeGO desabilitada</p>
+                        <h4 className="text-6xl md:text-9xl" style={{color: "var(--cinza-base)", fontWeight: 700}}>{bateria}%</h4>
+                        <p className="text-lg md:text-xl text-yellow-500">ChargeGO desabilitada</p>
                         </>
                     )}
-                    <button className="p-5 bg-green-800 rounded-3xl text-white hover:bg-green-700" onClick={mudarVisibilidade}>PREVISÃO POR QUILOMETRAGEM</button>
-            <Link className="text-xl underline hover:cursor-pointer" href="#caminho">Ver ChargeGO</Link>
+                    <button className="p-3 md:p-5 bg-green-800 rounded-3xl text-white hover:bg-green-700" onClick={mudarVisibilidade}>PREVISÃO POR QUILOMETRAGEM</button>
+                    <Link className="text-lg md:text-xl underline hover:cursor-pointer" href="#caminho">Ver ChargeGO</Link>
                 </div>
             
                 ) : 
-                <div className="flex flex-col mt-20 w-[70%] justify-evenly items-center h-[85vh]">
+                <div className="flex flex-col mt-20 w-full md:w-[70%] justify-evenly items-center h-[85vh]">
                     <h2 className="text-2xl">Distância máxima a ser percorrida</h2>
-                    <h3 className="text-9xl" style={{color: "var(--cinza-base)", fontWeight: 700}}>{previsaoPorQuilometragem()} km</h3>
-                    <button className="p-5 bg-green-800 rounded-3xl text-white hover:bg-green-700" onClick={mudarVisibilidade}>VER BATERIA DISPONÍVEL</button>
-            <Link className="text-xl underline hover:cursor-pointer" href="#caminho">Habilitar ChargeGO</Link>
+                    <h3 className="text-6xl md:text-9xl" style={{color: "var(--cinza-base)", fontWeight: 700}}>{previsaoPorQuilometragem()} km</h3>
+                    <button className="p-3 md:p-5 bg-green-800 rounded-3xl text-white hover:bg-green-700" onClick={mudarVisibilidade}>VER BATERIA DISPONÍVEL</button>
+                    <Link className="text-lg md:text-xl underline hover:cursor-pointer" href="#caminho">Habilitar ChargeGO</Link>
                 </div>
             }
-=======
-            <div className="flex flex-col mt-20 w-[70%] justify-evenly items-center h-[85vh]">
-                <h3 className="text-2xl">Sua bateria atual:</h3>
-                <h4 className="text-9xl" style={{color: "var(--cinza-base)", fontWeight: 700}}>40%</h4>
-                <button className="p-5 bg-green-800 rounded-3xl text-white hover:bg-green-700">PREVISÃO DE QUILOMETRAGEM</button>
-                <Link className="text-xl underline hover:cursor-pointer" href="#btnHabilita">Habilitar ChangeGO</Link>
-            </div>
->>>>>>> c4ed423e0a570980a215337fc366c32919049cea
-        <div>
+        <div className="hidden md:block">
             <Image src={Musgo} alt="Musgo"/>
         </div>
      </div>
 
-     {/* ABAIXO 2° */}
-     {/* tirar mb dps */}
-    <div className="flex flex-col w-full h-[95vh] mb-10 overflow-hidden items-center" style={{backgroundColor: "var(--verde-escuro)"}}> 
+     <div className="flex flex-col w-full h-[95vh] mb-10 overflow-hidden items-center" style={{backgroundColor: "var(--verde-escuro)"}}> 
         <Image src={Folha} alt="" className="h-[20%] w-full object-cover object-bottom opacity-35" />
-        <div className="flex w-[70%]">
-            <div className="w-[50%] flex items-center justify-center">
-                <Image src={ChargeGo} alt="carregador por indução ChangeGo"></Image>
-            </div>
-            <div className="w-[50%] flex flex-col items-center justify-evenly">
-                <h3 id="caminho"  className="text-white text-2xl">Bateria disponível ChargeGO:</h3>
-                <h4 className="text-9xl" style={{color: "white", fontWeight: 700}}>40%</h4>
-                <p className="text-gray-300 text-3xl">30km/h</p>
+        <div className="flex flex-col md:flex-row w-full md:w-[70%]">
+        <div className="w-full md:w-[40%] flex items-center justify-center">
+            <Image 
+                src={ChargeGo} 
+                alt="carregador por indução ChangeGo"
+                className="w-full h-auto max-w-[300px] md:max-w-[300px] object-contain"
+            />
+        </div>
+
+            <div className="w-full md:w-[50%] flex flex-col items-center justify-evenly">
+                <h3 id="caminho" className="text-white text-2xl">Bateria disponível ChargeGO:</h3>
+                <h4 className="text-4xl md:text-9xl" style={{color: "white", fontWeight: 700}}>40%</h4>
+                <p className="text-gray-300 text-2xl md:text-3xl">30km/h</p>
             </div>
         </div>
         {carregador ? (
             <>
-            <div className="fixed top-32 left-10 w-32 h-32 p-5 items-center justify-center rounded-full animate-float bg-green-800 transition-opacity duration-500 opacity-100 hover:opacity-0">
+            <div className="fixed top-32 left-10 w-24 md:w-20 h-20 md:h-32 p-5 items-center justify-center rounded-full animate-float bg-green-800 transition-opacity duration-500 opacity-100 hover:opacity-0">
                 <Image src={ChargeGo} alt="carregador por indução ChangeGo"></Image>
             </div>
-                <button className="p-5 bg-green-800 rounded-3xl w-[30%] text-white hover:bg-green-700" onClick={mudarCarregador}>DESABILITAR</button>
+                <button className="p-3 md:p-5 bg-green-800 rounded-3xl w-[60%] md:w-[30%] text-white hover:bg-green-700" onClick={mudarCarregador}>DESABILITAR</button>
             </>
         ) : (
-            <button id="btnHabilita" className="p-5 bg-green-800 rounded-3xl w-[30%] text-white hover:bg-green-700" onClick={mudarCarregador}>HABILITAR</button>
+            <button id="btnHabilita" className="p-3 md:p-5 bg-green-800 rounded-3xl w-[60%] md:w-[30%] text-white hover:bg-green-700" onClick={mudarCarregador}>HABILITAR</button>
         )}
     </div>
-
-
-
-
     </main>
   );
 }

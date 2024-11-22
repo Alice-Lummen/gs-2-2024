@@ -10,7 +10,7 @@ export default function CabecalhoEquipe() {
                 className="absolute top-0 left-0 w-full h-full object-cover opacity-30 z-0"
             />
             <div className="relative z-10 text-center">
-                <h1 className="text-8xl text-white" style={{color: "var(--verde-escuro)"}}>TRIA</h1>
+                <h1 className="text-7xl text-white md:text-8xl" style={{color: "var(--verde-escuro)"}}>TRIA</h1>
                 <p className="text-2xl text-white" style={{color: "var(--verde-normal)"}}>Quem somos nós?</p>
             </div>
         </header>
