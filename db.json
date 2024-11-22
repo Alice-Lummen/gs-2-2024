@@ -1,0 +1,11 @@
+{
+    "slides": [
+      { "id": 1, "diaSemana": "Segunda-feira", "bateria": 80, "porcentagem": 50 },
+      { "id": 2, "diaSemana": "Terça-feira", "bateria": 70, "porcentagem": 60 },
+      { "id": 3, "diaSemana": "Quarta-feira", "bateria": 60, "porcentagem": 70 },
+      { "id": 4, "diaSemana": "Quinta-feira", "bateria": 50, "porcentagem": 80 },
+      { "id": 5, "diaSemana": "Sexta-feira", "bateria": 40, "porcentagem": 90 },
+      { "id": 6, "diaSemana": "Sábado", "bateria": 30, "porcentagem": 100 },
+      { "id": 7, "diaSemana": "Domingo", "bateria": 20, "porcentagem": 30 }
+    ]
+  }

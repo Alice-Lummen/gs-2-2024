@@ -1,5 +1,5 @@
 import Terra from "@/../public/images/terra.png"
-import ChangeGo from "@/../public/images/changeGo.png";
+import ChargeGo from "@/../public/images/chargeGo.png";
 import Celular from "@/../public/images/celularChange.png";
 import Image from "next/image"
 
@@ -9,17 +9,17 @@ export default function SaibaMais(){
             <header className="flex h-[90vh] items-center">
                 <div className="flex flex-col w-[50%] justify-center items-center">
                     <h3 className="text-xl">O QUE É A</h3>
-                    <h2 className="text-5xl mt-10 font-bold"><span style={{color: "var(--verde-escuro)"}}>Change</span><span className="text-green-700">GO</span></h2>
+                    <h2 className="text-5xl mt-10 font-bold"><span style={{color: "var(--verde-escuro)"}}>Charge</span><span className="text-green-700">GO</span></h2>
                 </div>
                 <div className="w-[50%]">
-                    <Image src={ChangeGo} alt="ChangeGo" className="w-[90vw] opacity-25"></Image>
+                    <Image src={ChargeGo} alt="ChargeGo" className="w-[90vw] opacity-25"></Image>
                 </div>
             </header>
 
             <div className="flex h-[90%] w-full justify-around p-20">
-                <Image src={ChangeGo} alt="Placa por induçãp ChangeGo"></Image>
+                <Image src={ChargeGo} alt="Placa por induçãp ChangeGo" className="animate-float"></Image>
                 <div className="w-[50%] flex flex-col items-center justify-center text-2xl font-medium" style={{color: "var(--cinza-base)"}}>
-                    <p>A <span style={{color: "var(--verde-escuro)"}}>ChangeGO</span> trata-se de uma placa de carregamento automotivel por indução, que funciona como uma bateria extra.</p>
+                    <p>A <span style={{color: "var(--verde-escuro)"}}>ChargeGO</span> trata-se de uma placa de carregamento automotivel por indução, que funciona como uma bateria extra.</p>
                     <p className="mt-5">Ela possui um ima,  que deve ser fixado na parte inferior do veículo.</p>
                 </div>
             </div>
@@ -40,13 +40,17 @@ export default function SaibaMais(){
             </div>
 
             <div className="flex h-[90vh] items-center justify-center">
-
-            <Image 
-            src={Terra} 
-            alt="Planeta terra girando" 
-            className="w-48 h-48 animate-spin-slow">
-                
-            </Image>
+                <div className="w-[50%] flex items-center justify-center">
+                <Image 
+                    src={Terra} 
+                    alt="Planeta terra girando" 
+                    className="w-64 h-64 animate-spin-slow">
+                </Image>
+                 </div>
+                 <div className="w-[50%]" style={{color: "var(--verde-escuro)"}} >
+                    <h3 className="text-4xl font-bold">Com a ChargeGo,</h3>
+                    <p className="w-[70%] text-2xl mt-5">a transformação rumo ao <span className="italic" style={{color: "var(--verde-normal)"}}>mundo sustentável</span> que tanto precisamos fica mais próxima do que nunca</p>
+                 </div>
             </div>
 
         </main>

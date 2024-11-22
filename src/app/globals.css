@@ -13,12 +13,13 @@
   --verde-escuro: #2c4214;
   --verde-normal: #6ea52c;
   --cinza-base: #545454;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Open Sans', sans-serif;
+
 
 }
 
@@ -35,6 +36,36 @@ body {
   
   .animate-spin-slow {
 	animation: spin-slow 10s linear infinite;
+  }
+
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0); 
+    }
+  }
+
+  .animate-float {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes descer {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .animate-descer{
+    animation: descer 2s ease-out;
   }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

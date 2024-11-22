@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 export default function CardMembro({ foto, nome, linkGithub, github, linkLinkedin, linkedin, rm, turma }: CardMembroProps) {
 
     return (
-        <div className="p-5 rounded-lg bg-white flex flex-col items-center justify-center gap-2.5 overflow-hidden w-[250px]">
+        <div className="p-5 rounded-lg bg-white flex flex-col items-center justify-center gap-2.5 overflow-hidden w-[250px] h-[500px]">
             <Image layout="responsive" src={foto} alt={`Foto integrante: ${nome}`} className="" />
             <h3 className="text-2xl text-[#00345A]">{nome}</h3>
             <div className="w-[250px] flex flex-col items-start gap-1.5 p-5">

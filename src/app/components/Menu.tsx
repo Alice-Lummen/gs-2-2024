@@ -11,7 +11,7 @@ export default function Menu() {
           <ul className="flex flex-row justify-around items-center text-white">
             <Link href={"/bateria"}><li>Bateria Atual</li></Link>
             <Link href={"/buscarPontos"}><li>Pontos de Recarga</li></Link>
-            <Link href={""}><li>Calendário de Uso</li></Link>
+            <Link href={"/calendarioUso"}><li>Calendário de Uso</li></Link>
             <Link href={"/tria"}><li>Sobre nós</li></Link>
           </ul>
         </div>

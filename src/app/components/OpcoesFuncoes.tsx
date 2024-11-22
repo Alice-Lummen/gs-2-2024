@@ -10,7 +10,7 @@ export default function OpcoesFuncoes(){
         <div className="flex justify-around mt-10 h-[85vh] items-center">
         <div className="flex flex-col w-[33.33%] h-[400px] justify-evenly items-center">
           <Image src={Bateria} alt="Acompanhar uso energético"></Image>
-          <h2 className="text-3xl">Ver estado atual da bateria</h2>
+          <h2 className="text-2xl text-center">Ver estado atual da bateria</h2>
           <p className="text-xl text-gray-500 text-center w-[85%]">Acompanhe a quantidade de bateria que o seu veículo ainda possui</p>
           <Link href={"/bateria"}>
              <button style={{ border: "2px solid var(--verde-claro)" }} className="bg-transparent text-black px-4 py-2 rounded-[20px] hover:bg-gray-200">VER BATERIA</button>
@@ -18,15 +18,15 @@ export default function OpcoesFuncoes(){
         </div>
         <div className="flex flex-col w-[33.33%] h-[400px] justify-evenly items-center">
           <Image src={Mapa} alt="Acompanhar uso energético"></Image>
-          <h2 className="text-3xl">Descubra pontos de recarga</h2>
+          <h2 className="text-2xl text-center">Descubra pontos de recarga</h2>
           <p className="text-xl text-gray-500 text-center w-[85%]">Veja os pontos de recarga mais próximo do seu veículo</p>
           <Link href={"/buscarPontos"}><button style={{ border: "2px solid var(--verde-claro)" }} className="bg-transparent text-black px-4 py-2 rounded-[20px] hover:bg-gray-200">BUSCAR RECARGA</button></Link>
         </div>
         <div className="flex flex-col w-[33.33%] h-[400px] justify-evenly items-center">
           <Image src={Folha} alt="Acompanhar uso energético"></Image>
-          <h2 className="text-3xl">Acompanhar consumo energético</h2>
+          <h2 className="text-2xl text-center">Calendário do consumo energético</h2>
           <p className="text-xl text-gray-500 text-center w-[85%]">Veja os pontos de recarga mais próximo do seu veículo</p>
-          <button style={{ border: "2px solid var(--verde-claro)" }} className="bg-transparent text-black px-4 py-2 rounded-[20px] hover:bg-gray-200">ACOMPANHAR</button>
+          <Link href={"/calendarioUso"}><button style={{ border: "2px solid var(--verde-claro)" }} className="bg-transparent text-black px-4 py-2 rounded-[20px] hover:bg-gray-200">ACOMPANHAR</button></Link>
 
         </div>
         

@@ -22,7 +22,7 @@ export default function Cabecalho() {
                     <Image 
                     src={Onibus}
                     alt="Onibus sustentável"
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-full max-h-full object-contain animate-descer"
                     ></Image>
                 </div>
             </div>
