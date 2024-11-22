@@ -21,8 +21,9 @@ export default function Menu() {
           </div>
         </Link>
         
-        <div className="hidden md:block lg:text-xl w-full md:w-[50%]">
+        <div className="hidden md:block lg:text-xl w-full md:w-[70%]">
           <ul className="flex flex-row justify-around items-center text-white text-lg">
+            <Link href={"/crud"}><li>Ver Crud</li></Link>
             <Link href={"/bateria"}><li>Bateria Atual</li></Link>
             <Link href={"/buscarPontos"}><li>Pontos de Recarga</li></Link>
             <Link href={"/calendarioUso"}><li>Calendário de Uso</li></Link>
@@ -35,6 +36,7 @@ export default function Menu() {
           {isMenuOpen && (
             <div className="z-40 absolute top-20 left-0 w-full bg-green-700 text-white opacity-90 p-4">
               <ul className="m-2">
+                <Link href={"/crud"}><li>Ver Crud</li></Link>
                 <Link className="m-2" href={"/bateria"}><li>Bateria Atual</li></Link>
                 <Link className="m-2" href={"/buscarPontos"}><li>Pontos de Recarga</li></Link>
                 <Link className="m-2" href={"/calendarioUso"}><li>Calendário de Uso</li></Link>

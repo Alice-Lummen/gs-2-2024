@@ -5,9 +5,9 @@ import Link from "next/link";
 export default function Crud(){
     return(
         <main className="flex flex-col items-center justify-center">
-            <h2 className="text-3xl text-center font-bold mb-2 text-green-700">CRUD</h2>
-            <p className="text-center mb-4 font-bold">O que vamos ver hoje?</p>
-            <div className="flex flex-row gap-2">
+            <h2 className="text-4xl text-center font-bold mb-2 text-green-700">CRUD</h2>
+            <p className="text-center mb-4 font-bold text-2xl">O que vamos ver hoje?</p>
+            <div className="flex flex-row mt-4 gap-2">
                 <Link href={'/carros'}>
                     <button className="bg-green-700 text-white text-xl p-2 rounded-md hover:bg-green-800">Ver Carros</button>
                 </Link>
