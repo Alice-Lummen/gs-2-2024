@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ChargeGo
 
-## Getting Started
+ChargeGo é um carregador por indução portátil para carros elétricos, desenvolvido junto com um sistema de monitoramento inovador. O produto foi criado para resolver a falta de pontos de recarga, incentivando a adoção de carros elétricos e promovendo o uso de energia limpa.
 
-First, run the development server:
+## Visão Geral e Objetivos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O objetivo principal do ChargeGo é sanar a dor da falta de pontos de recarga para carros elétricos. Com essa solução, espera-se que mais pessoas se sintam motivadas a optar por carros elétricos, contribuindo para a transição para fontes de energia sustentáveis.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O sistema ChargeGo oferece as seguintes funcionalidades:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. **Bateria Atual**
+Permite visualizar remotamente o nível de bateria do carro elétrico.
 
-## Learn More
+### 2. **Previsão de Quilometragem**
+Informa quantos quilômetros podem ser percorridos com a carga atual da bateria.
 
-To learn more about Next.js, take a look at the following resources:
+### 3. **Pontos de Recarga**
+Exibe os pontos de recarga mais próximos com base na localização escolhida pelo usuário.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. **Calendário de Energia**
+Fornece um histórico detalhado de consumo de energia, permitindo que o usuário veja o quanto de energia foi consumido em cada dia do mês.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Benefícios
 
-## Deploy on Vercel
+- Incentiva o uso de carros elétricos, ajudando na redução de emissões de carbono.
+- Fornece praticidade com recarga portátil.
+- Melhora a experiência do usuário com monitoramento inteligente e acesso a informações importantes em tempo real.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribuição para a Sustentabilidade
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ChargeGo é mais do que um carregador; é um passo à frente na promoção da energia limpa e na construção de um futuro mais sustentável.
+
+---
+
+Para mais informações sobre como usar o ChargeGo ou para suporte técnico, entre em contato com nossa equipe.
