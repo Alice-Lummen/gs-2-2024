@@ -2,12 +2,12 @@
 
 import Folha from "@/../public/images/folhasFundo.png";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import db from "@/../db.json";
 import { Carregando } from "../components/Carregando";
 
 export default function CalendarioUso() {
-    const [slides, setSlides] = useState(db.slides || []);
+    const [slides] = useState(db.slides || []);
     const [atual, setAtual] = useState(0);
     const [animar, setAnimar] = useState(false);
       const [isReady, setIsReady] = useState(false);
@@ -21,22 +21,20 @@ export default function CalendarioUso() {
     }
 
     const prev = () => {
-        ativarAnimacao(); // Ativa a animação
-        setAtual(atual === 0 ? slides.length - 1 : atual - 1); // Mover para trás
+        ativarAnimacao(); 
+        setAtual(atual === 0 ? slides.length - 1 : atual - 1); 
     };
 
     const next = () => {
         ativarAnimacao(); // Ativa a animação
-        setAtual((atual + 1) % slides.length); // Mover para frente
+        setAtual((atual + 1) % slides.length); 
     };
 
-    // Função para ativar a animação
     const ativarAnimacao = () => {
-        setAnimar(true); // Ativa o estado da animação
-        setTimeout(() => setAnimar(false), 300); // Remove o estado após 300ms
+        setAnimar(true); 
+        setTimeout(() => setAnimar(false), 300);
     };
 
-    // Índice do indicador central
     const indicadorCentral = Math.floor(3 / 2);
 
     return (
@@ -54,7 +52,6 @@ export default function CalendarioUso() {
                 </h1>
             </div>
 
-            {/* Carrossel */}
             <div className="relative overflow-hidden w-full md:w-[80%]">
                 <div
                     className="flex transition-transform ease-out duration-500"
@@ -97,8 +94,6 @@ export default function CalendarioUso() {
                 <div className="absolute bottom-24 md:bottom-48 right-0 left-0">
                     <div className="flex items-center justify-center gap-1 md:gap-2">
                         {Array.from({ length: 3 }).map((_, i) => {
-                            const indexSlide = (atual + i - indicadorCentral + slides.length) % slides.length;
-
                             return (
                                 <div
                                     key={i}

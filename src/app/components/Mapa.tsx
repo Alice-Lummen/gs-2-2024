@@ -38,7 +38,6 @@ export default function Mapa() {
         style={{ height: "100%", width: "100%", border: '3px solid var(--verde-normal)' }}
         className="rounded-full"
       >
-        {/* Mapa de fundo (OpenStreetMap) */}
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
