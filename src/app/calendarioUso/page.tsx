@@ -2,7 +2,7 @@
 
 import Folha from "@/../public/images/folhasFundo.png";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import db from "@/../db.json";
 import { Carregando } from "../components/Carregando";
 
