@@ -4,10 +4,20 @@ import CardMembro from "../components/CardMembro";
 import Alice from "@/../public/images/alice.png"
 import Akira from "@/../public/images/akira.png"
 import Anne from "@/../public/images/anne.png"
+import { useEffect, useState } from "react";
+import { Carregando } from "../components/Carregando";
 
 
 export default function Equipe() {
+  const [isReady, setIsReady] = useState(false);
 
+     useEffect(() => {
+                    setTimeout(() => setIsReady(true), 2000); // Define um timeout de 2 segundos antes de marcar como pronto
+    }, []);
+
+    if (!isReady) {
+        return Carregando();
+    }
     return (
         <>  
             <CabecalhoEquipe/>

@@ -1,9 +1,21 @@
+"use client"
 import Terra from "@/../public/images/terra.png"
 import ChargeGo from "@/../public/images/chargeGo.png";
 import Celular from "@/../public/images/celularChange.png";
 import Image from "next/image"
+import { useEffect, useState } from "react";
+import { Carregando } from "../components/Carregando";
 
 export default function SaibaMais(){
+      const [isReady, setIsReady] = useState(false);
+
+     useEffect(() => {
+                    setTimeout(() => setIsReady(true), 2000); // Define um timeout de 2 segundos antes de marcar como pronto
+    }, []);
+
+    if (!isReady) {
+        return Carregando();
+    }
     return(
         <main>
             <header className="flex flex-col md:flex-row h-auto md:h-[90vh] items-center">

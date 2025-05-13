@@ -8,13 +8,17 @@ import Link from "next/link";
 import carga from "@/../carga.json";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Carregando } from "../components/Carregando";
 
 export default function Bateria() {
     const [bateria, setBateria] = useState(0);
     const [visibilidade, setVisibilidade] = useState(false);
     const [carregador, setCarregador] = useState(false);
+    const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
+        setTimeout(() => setIsReady(true), 2000); // Define um timeout de 2 segundos antes de marcar como pronto
+
         carga.map((carga) => {
             if (carga.kwh <= carga.bateriaTotal) {
                 const utilizado = ((carga.kwh / carga.bateriaTotal) * 100);
@@ -26,6 +30,12 @@ export default function Bateria() {
             }
         })
     }, [])
+
+
+    
+        if (!isReady) {
+            return Carregando();
+        }
 
     const previsaoPorQuilometragem = () => {
         if (carga.length > 0 && carga[0].kwh <= carga[0].bateriaTotal) {
@@ -99,7 +109,7 @@ export default function Bateria() {
         </div>
         {carregador ? (
             <>
-            <div className="fixed top-32 left-10 w-24 md:w-20 h-20 md:h-32 p-5 items-center justify-center rounded-full animate-float bg-green-800 transition-opacity duration-500 opacity-100 hover:opacity-0">
+            <div className="fixed top-32 left-10 w-24 md:w-20 h-20 md:h-20 p-5 items-center justify-center rounded-full animate-float bg-green-800 transition-opacity duration-500 opacity-100 hover:opacity-0">
                 <Image src={ChargeGo} alt="carregador por indução ChangeGo"></Image>
             </div>
                 <button className="p-3 md:p-5 bg-green-800 rounded-3xl w-[60%] md:w-[30%] text-white hover:bg-green-700" onClick={mudarCarregador}>DESABILITAR</button>

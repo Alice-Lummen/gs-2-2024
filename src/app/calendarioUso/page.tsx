@@ -4,11 +4,21 @@ import Folha from "@/../public/images/folhasFundo.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import db from "@/../db.json";
+import { Carregando } from "../components/Carregando";
 
 export default function CalendarioUso() {
     const [slides, setSlides] = useState(db.slides || []);
     const [atual, setAtual] = useState(0);
     const [animar, setAnimar] = useState(false);
+      const [isReady, setIsReady] = useState(false);
+
+     useEffect(() => {
+                    setTimeout(() => setIsReady(true), 2000); // Define um timeout de 2 segundos antes de marcar como pronto
+    }, []);
+
+    if (!isReady) {
+        return Carregando();
+    }
 
     const prev = () => {
         ativarAnimacao(); // Ativa a animação

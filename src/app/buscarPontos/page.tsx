@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MapaPontos from "@/../public/images/mapaPontos.png";
 import Folha from "@/../public/images/folhasFundo.png";
 import Image from "next/image";
 import Mapa from "../components/Mapa";
+import { Carregando } from "../components/Carregando";
 
 export default function BuscarPontos() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,8 +18,18 @@ export default function BuscarPontos() {
     setIsModalOpen(false);
   };
 
+  const [isReady, setIsReady] = useState(false);
+
+     useEffect(() => {
+                    setTimeout(() => setIsReady(true), 2000); // Define um timeout de 2 segundos antes de marcar como pronto
+    }, []);
+
+    if (!isReady) {
+        return Carregando();
+    }
+
   return (
-    <main className="relative w-full h-[95vh] flex flex-col justify-center items-center">
+    <main className="relative w-full h-[90vh] flex flex-col justify-center items-center">
       <Image
         src={Folha}
         alt="Folhas de fundo"
